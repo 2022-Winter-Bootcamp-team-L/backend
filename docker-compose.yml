@@ -52,3 +52,14 @@ services:
       - C_FORCE_ROOT=true
     command: sh -c "celery -A backend worker --loglevel=info"
 
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    environment:
+      - RABBITMQ_USER=admin
+      - RABBITMQ_PASSWORD=admin
+    ports:
+      - "5672:5672" # Default Port
+      - "15672:15672" # UI Port
+    expose:
+      - "15672"
