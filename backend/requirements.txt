@@ -4,3 +4,6 @@ djangorestframework==3.13.1
 asgiref==3.6.0
 sqlparse==0.4.3
 cryptography
+django_celery_beat
+django_celery_results
+celery

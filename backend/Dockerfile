@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.12.0a3-alpine
+FROM python:3.10.0a3-alpine
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -14,11 +14,11 @@ ENV DJANGO_CORS_ORIGIN_WHITELIST $DJANGO_CORS_ORIGIN_WHITELIST
 
 WORKDIR /backend
 COPY requirements.txt /backend/
-
-RUN apk add --no-cache \
-        libressl-dev \
-        musl-dev \
-        libffi-dev  gcc
+#
+#RUN apk add --no-cache \
+#        libressl-dev \
+#        musl-dev \
+#        libffi-dev  gcc
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN pip install pymysql

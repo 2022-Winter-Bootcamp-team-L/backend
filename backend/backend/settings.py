@@ -83,7 +83,7 @@ DATABASES = {
     "default": {
         'ENGINE': os.environ.get('SQL_ENGINE', 'django.db.backends.mysql'),
         'NAME': os.environ.get('SQL_DATABASE', os.path.join(BASE_DIR, 'mysql-db')),
-        'USER': os.environ.get('SQL_USER', 'user_f'),
+        'USER': os.environ.get('SQL_USER', 'root'),
         #'USER': os.environ.get('SQL_USER', 'localhost'),
         'PASSWORD': os.environ.get('SQL_PASSWORD', '1234'),
         'HOST': os.environ.get('SQL_HOST', '127.0.0.1'),
